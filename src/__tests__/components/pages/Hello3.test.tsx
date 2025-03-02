@@ -41,7 +41,7 @@ describe('Hello3 コンポーネント (GraphQL)', () => {
 
     const TestWrapper = () => (
       <MockedProvider mocks={mocks} addTypename={false}>
-        <MemoryRouter initialEntries={['/']}>
+        <MemoryRouter initialEntries={['/hello3']}>
           <AppRoutes />
         </MemoryRouter>
       </MockedProvider>
@@ -65,7 +65,7 @@ describe('Hello3 コンポーネント (GraphQL)', () => {
 
     const TestWrapper = () => (
       <MockedProvider mocks={mocks} addTypename={false}>
-        <MemoryRouter initialEntries={['/']}>
+        <MemoryRouter initialEntries={['/hello3']}>
           <AppRoutes />
         </MemoryRouter>
       </MockedProvider>
@@ -89,7 +89,7 @@ describe('Hello3 コンポーネント (GraphQL)', () => {
 
     const TestWrapper = () => (
       <MockedProvider mocks={mocks} addTypename={false}>
-        <MemoryRouter initialEntries={['/']}>
+        <MemoryRouter initialEntries={['/hello3']}>
           <AppRoutes />
         </MemoryRouter>
       </MockedProvider>
@@ -116,7 +116,7 @@ describe('Hello3 コンポーネント (GraphQL)', () => {
 
     const TestWrapper = () => (
       <MockedProvider mocks={mocks} addTypename={false}>
-        <MemoryRouter initialEntries={['/']}>
+        <MemoryRouter initialEntries={['/hello3']}>
           <AppRoutes />
         </MemoryRouter>
       </MockedProvider>
