@@ -10,6 +10,12 @@ const Main: React.FC = () => {
     navigate('/hello3')
   }
 
+  const onLinkClick = () => {
+    const url = import.meta.env.VITE_APP_URL
+    console.log(url)
+    window.open(url, '_blank')
+  }
+
   return (
     <div>
       <div>
@@ -25,6 +31,11 @@ const Main: React.FC = () => {
           <li>
             <a href="#" onClick={onHello3Click}>
               /hello3
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={onLinkClick}>
+              /link
             </a>
           </li>
         </ul>
