@@ -10,7 +10,7 @@ const Main: React.FC = () => {
     navigate('/hello3')
   }
 
-  const onLinkClick = () => {
+  const onOuterLinkClick = () => {
     const url = import.meta.env.VITE_APP_URL
     console.log(url)
     window.open(url, '_blank')
@@ -34,7 +34,7 @@ const Main: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#" onClick={onLinkClick}>
+            <a href="#" onClick={onOuterLinkClick}>
               /link
             </a>
           </li>
