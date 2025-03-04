@@ -11,7 +11,7 @@ const Main: React.FC = () => {
   }
 
   const onOuterLinkClick = () => {
-    const url = import.meta.env.VITE_APP_URL
+    const url = import.meta.env.VITE_API_URL
     console.log(url)
     window.open(url, '_blank')
   }

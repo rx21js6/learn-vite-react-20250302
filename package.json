@@ -9,7 +9,7 @@
     "build:production": "tsc -b && vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest run --mode test",
     "test watch": "vitest",
     "format:check": "prettier --check ./src/",
     "format": "prettier --write ./src/"
