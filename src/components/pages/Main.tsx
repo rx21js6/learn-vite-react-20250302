@@ -10,6 +10,10 @@ const Main: React.FC = () => {
     navigate('/hello3')
   }
 
+  const onHello4Click = () => {
+    navigate('/hello4')
+  }
+
   const onOuterLinkClick = () => {
     const url = import.meta.env.VITE_API_URL
     console.log(url)
@@ -36,6 +40,11 @@ const Main: React.FC = () => {
           <li>
             <a href="#" onClick={onOuterLinkClick}>
               /link
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={onHello4Click}>
+              /hello4
             </a>
           </li>
         </ul>
