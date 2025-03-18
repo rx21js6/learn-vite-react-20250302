@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { MockedProvider } from '@apollo/client/testing'
 import { MemoryRouter, useNavigate } from 'react-router-dom' // 修正: react-router ではなく react-router-dom からインポート
 import { describe, expect, it, Mock, vi } from 'vitest'
-import AppRoutes from '../../../routes'
+import AppRoutes from '@/routes'
 
 vi.mock('react-router-dom', async () => {
   const actual =

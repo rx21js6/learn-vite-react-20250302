@@ -4,8 +4,8 @@ import { MemoryRouter } from 'react-router-dom'
 import { MockedProvider } from '@apollo/client/testing'
 import { DocumentNode } from '@apollo/client'
 import { FieldNode } from 'graphql'
-import { FIRST_MUTATION, SECOND_MUTATION } from '../../../graphql/mutation'
-import AppRoutes from '../../../routes'
+import { FIRST_MUTATION, SECOND_MUTATION } from '@/graphql/mutation'
+import AppRoutes from '@/routes'
 
 // ヘルパー関数：GraphQL の AST からフィールド名を取得
 function getFieldName(query: DocumentNode): string {

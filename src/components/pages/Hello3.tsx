@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
-import { FIRST_MUTATION, SECOND_MUTATION } from '../../graphql/mutation'
+import { FIRST_MUTATION, SECOND_MUTATION } from '@/graphql/mutation'
 
 const Hello3: React.FC = () => {
   const navigate = useNavigate()

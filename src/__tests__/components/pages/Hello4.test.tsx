@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { MemoryRouter } from 'react-router'
 import { describe, it, expect, vi } from 'vitest'
-import AppRoutes from '../../../routes'
+import AppRoutes from '@/routes'
 
 describe('Hello4 コンポーネント', () => {
   it('クリック時にFormを動的に生成してPOSTする', async () => {

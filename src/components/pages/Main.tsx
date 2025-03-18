@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { DummyParts } from '@/components/parts/Emoji'
 
 const Main: React.FC = () => {
   const navigate = useNavigate()
@@ -48,6 +49,9 @@ const Main: React.FC = () => {
             </a>
           </li>
         </ul>
+      </div>
+      <div>
+        <DummyParts />
       </div>
     </div>
   )

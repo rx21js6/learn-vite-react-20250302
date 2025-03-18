@@ -2,7 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { describe, it, vi, expect } from 'vitest'
 import { MemoryRouter } from 'react-router-dom'
 import axios from 'axios'
-import AppRoutes from '../../../routes'
+import AppRoutes from '@/routes'
 
 // axios のモック
 vi.mock('axios')
