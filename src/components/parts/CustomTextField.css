@@ -1,0 +1,16 @@
+.customTextField {
+  background-color: rgb(194, 180, 180);
+  min-width: 320;
+}
+
+.customTextFieldLabel {
+  background-color: rgb(219, 101, 101);
+}
+
+.customTextFieldNote {
+  background-color: rgb(44, 148, 117);
+}
+
+.customTextFieldInput {
+  background-color: rgb(113, 87, 155);
+}
