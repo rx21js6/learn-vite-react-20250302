@@ -1,16 +1,50 @@
 .customTextField {
   background-color: rgb(194, 180, 180);
-  min-width: 320;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customTextFieldHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0; /* 子要素の縮小を正しく制御 */
+}
+
+/* 600px以上で横並び */
+@media screen and (min-width: 600px) {
+  .customTextFieldHeader {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .customTextFieldLabel {
+    background-color: rgb(219, 101, 101);
+    padding: 8px;
+    white-space: nowrap;       /* 改行させない */
+    overflow: hidden;          /* はみ出た部分を隠す */
+    text-overflow: ellipsis;   /* はみ出た場合に省略記号を表示 */
+  }
+
+  .customTextFieldNote {
+    flex: 2;
+    word-break: break-word; /* 注釈部分は折り返し可能 */
+  }
 }
 
 .customTextFieldLabel {
   background-color: rgb(219, 101, 101);
+  padding: 8px;
 }
 
 .customTextFieldNote {
   background-color: rgb(44, 148, 117);
+  padding: 8px;
 }
 
 .customTextFieldInput {
   background-color: rgb(113, 87, 155);
+  padding: 8px;
 }
