@@ -23,9 +23,9 @@
   .customTextFieldLabel {
     background-color: rgb(219, 101, 101);
     padding: 8px;
-    white-space: nowrap;       /* 改行させない */
-    overflow: hidden;          /* はみ出た部分を隠す */
-    text-overflow: ellipsis;   /* はみ出た場合に省略記号を表示 */
+    white-space: nowrap; /* 改行させない */
+    overflow: hidden; /* はみ出た部分を隠す */
+    text-overflow: ellipsis; /* はみ出た場合に省略記号を表示 */
   }
 
   .customTextFieldNote {

@@ -57,6 +57,16 @@ const Main: React.FC = () => {
               /formPage
             </a>
           </li>
+          <li>
+            <a
+              href="#"
+              onClick={() => {
+                navigate('/customForm')
+              }}
+            >
+              /customForm
+            </a>
+          </li>
         </ul>
       </div>
       <div>

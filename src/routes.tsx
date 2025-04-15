@@ -7,6 +7,7 @@ import Hello from './components/pages/Hello'
 import Main from './components/pages/Main'
 import Hello4 from './components/pages/Hello4'
 import FormPage from './components/pages/FormPage'
+import { CustomForm } from './components/pages/CustomForm'
 
 const AppRoutes: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/formPage" element={<FormPage />} />
       <Route path="/error" element={<ErrorPage />} />
       <Route path="/success" element={<div>Success Page</div>} />
+      <Route path="/customForm" element={<CustomForm />} />
     </Routes>
   )
 }
