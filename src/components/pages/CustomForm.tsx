@@ -22,8 +22,8 @@ const schemaMode2 = z.object({
     .or(z.undefined()),
 })
 
-type FormDataMode1 = z.infer<typeof schemaMode1>
-type FormDataMode2 = z.infer<typeof schemaMode2>
+export type FormDataMode1 = z.infer<typeof schemaMode1>
+export type FormDataMode2 = z.infer<typeof schemaMode2>
 
 export const CustomForm: React.FC = () => {
   const [mode, setMode] = useState('1')
@@ -48,7 +48,10 @@ export const CustomForm: React.FC = () => {
     defaultValues,
   })
 
-  const [formMode, setFormMode] = useState<ReturnType<typeof useForm<FormDataMode1>> | ReturnType<typeof useForm<FormDataMode2>>>(formMode1)
+  const [formMode, setFormMode] = useState<
+    | ReturnType<typeof useForm<FormDataMode1>>
+    | ReturnType<typeof useForm<FormDataMode2>>
+  >(formMode1)
 
   const onModeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log('モード変更:', event.target.value)
@@ -68,9 +71,7 @@ export const CustomForm: React.FC = () => {
 
   return (
     <div>
-      <div>
-        {JSON.stringify(formMode.watch())}
-      </div>
+      <div>{JSON.stringify(formMode.watch())}</div>
       <div>
         <label>
           <input
@@ -95,19 +96,19 @@ export const CustomForm: React.FC = () => {
         <CustomErrorField
           title={'name'}
           placeholder={'name'}
-          form={formMode as ReturnType<typeof useForm<FormDataMode1>> | ReturnType<typeof useForm<FormDataMode2>>}
+          form={formMode}
           name={'name'}
         />
         <CustomErrorField
           title={'phoneNumber'}
           placeholder={'phoneNumber'}
-          form={formMode as ReturnType<typeof useForm<FormDataMode1>> | ReturnType<typeof useForm<FormDataMode2>>}
+          form={formMode}
           name={'phoneNumber'}
         />
         <CustomErrorField
           title={'mailAddress'}
           placeholder={'mailAddress'}
-          form={formMode as ReturnType<typeof useForm<FormDataMode1>> | ReturnType<typeof useForm<FormDataMode2>>}
+          form={formMode}
           name={'mailAddress'}
         />
         <button type="submit">送信</button>
