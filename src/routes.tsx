@@ -7,7 +7,8 @@ import Hello from './components/pages/Hello'
 import Main from './components/pages/Main'
 import Hello4 from './components/pages/Hello4'
 import FormPage from './components/pages/FormPage'
-import { CustomForm } from './components/pages/CustomForm'
+import { CustomDevidedSchemaForm } from './components/pages/CustomDevidedSchemaForm'
+import { CustomUniSchemaForm } from './components/pages/CustomUniSchemaForm'
 
 const AppRoutes: React.FC = () => {
   return (
@@ -20,7 +21,11 @@ const AppRoutes: React.FC = () => {
       <Route path="/formPage" element={<FormPage />} />
       <Route path="/error" element={<ErrorPage />} />
       <Route path="/success" element={<div>Success Page</div>} />
-      <Route path="/customForm" element={<CustomForm />} />
+      <Route
+        path="/customDevidedSchemaForm"
+        element={<CustomDevidedSchemaForm />}
+      />
+      <Route path="/customUniSchemaForm" element={<CustomUniSchemaForm />} />
     </Routes>
   )
 }

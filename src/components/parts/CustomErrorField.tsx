@@ -1,17 +1,12 @@
 import { FieldValues, useForm } from 'react-hook-form'
 
 import { Path } from 'react-hook-form'
-import { FormDataMode1, FormDataMode2 } from '../pages/CustomForm'
 
-export type CustomErrorFieldProps<
-  TFieldValues extends FieldValues = Record<string, unknown>,
-> = {
+type CustomErrorFieldProps<TFieldValues extends FieldValues> = {
   title: string
   name: Path<TFieldValues>
   placeholder: string
-  form:
-    | ReturnType<typeof useForm<FormDataMode1>>
-    | ReturnType<typeof useForm<FormDataMode2>>
+  form: ReturnType<typeof useForm<TFieldValues>>
 }
 export const CustomErrorField = <TFieldValues extends FieldValues>(
   props: CustomErrorFieldProps<TFieldValues>
@@ -26,7 +21,10 @@ export const CustomErrorField = <TFieldValues extends FieldValues>(
         <input type="text" placeholder={placeholder} {...form.register(name)} />
       </div>
       <div className="customErrorFieldError">
-        {(form.formState.errors[name]?.message as string) ?? ''}
+        {(form.formState.errors[name as keyof TFieldValues] &&
+          (form.formState.errors[name as keyof TFieldValues]
+            ?.message as string)) ??
+          ''}
       </div>
     </div>
   )

@@ -61,10 +61,20 @@ const Main: React.FC = () => {
             <a
               href="#"
               onClick={() => {
-                navigate('/customForm')
+                navigate('/customDevidedSchemaForm')
               }}
             >
-              /customForm
+              /customDevidedSchemaForm
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onClick={() => {
+                navigate('/customUniSchemaForm')
+              }}
+            >
+              /customUniSchemaForm
             </a>
           </li>
         </ul>

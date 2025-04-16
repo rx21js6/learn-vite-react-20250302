@@ -25,7 +25,7 @@ const schemaMode2 = z.object({
 export type FormDataMode1 = z.infer<typeof schemaMode1>
 export type FormDataMode2 = z.infer<typeof schemaMode2>
 
-export const CustomForm: React.FC = () => {
+export const CustomDevidedSchemaForm: React.FC = () => {
   const [mode, setMode] = useState('1')
 
   const defaultValues = {
